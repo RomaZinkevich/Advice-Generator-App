@@ -1,4 +1,8 @@
 window.onload = function(){
+    generateAdvice();
+}
+
+const generateAdvice = () => {
     const header = document.querySelector("h1");
     const text = document.querySelector("p")
     fetch("https://api.adviceslip.com/advice")
