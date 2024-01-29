@@ -65,7 +65,7 @@ a {
 }
 
 a:hover{
-    opacity: 0.8;
+    box-shadow: 0px 0px 25px hsl(150, 100%, 66%);
 }
 
 a img {

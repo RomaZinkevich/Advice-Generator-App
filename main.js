@@ -1,8 +1,7 @@
-window.onload = function(){
-    generateAdvice();
-}
+const btn = document.querySelector("a");
 
-const generateAdvice = () => {
+const generateAdvice = (event) => {
+    event.preventDefault();
     const header = document.querySelector("h1");
     const text = document.querySelector("p")
     fetch("https://api.adviceslip.com/advice")
@@ -13,3 +12,6 @@ const generateAdvice = () => {
         text.innerHTML=`"${answer.advice}"`;
     })
 }
+
+document.addEventListener('DOMContentLoaded', generateAdvice);
+btn.addEventListener("click", generateAdvice)
